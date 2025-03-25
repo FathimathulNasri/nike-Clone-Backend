@@ -10,8 +10,13 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
+const allowedOrigins = ['http://localhost:3000']
+
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: allowedOrigins,
+  credentials:true
+}));
 app.use(express.json()); // Body parser
 
 // Routes
