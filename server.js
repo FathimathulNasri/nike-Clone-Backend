@@ -14,8 +14,7 @@ const allowedOrigins = ['http://localhost:3000', 'http://localhost:5000']
 
 // Middleware
 app.use(cors({
-  origin: allowedOrigins,
-  credentials:true
+  origin: allowedOrigins
 }));
 app.use(express.json()); // Body parser
 
